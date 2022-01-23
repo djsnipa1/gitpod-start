@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "start": "npx sass scss/global.scss css/global.css --watch",
+    "build": "npx sass scss/global.scss css/global.css --style=compressed"
+  },
+  "dependencies": {
+    "gorko": "^0.9.1",
+    "modern-css-reset": "^1.4.0",
+    "sass": "^1.49.0"
+  },
+  "name": "css-cube-tutorial",
+  "version": "1.0.0",
+  "description": "from here http://lynx.re/x",
+  "main": "index.html",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/djsnipa1/css-cube-tutorial.git"
+  },
+  "author": "Chad Boyce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djsnipa1/css-cube-tutorial/issues"
+  },
+  "homepage": "https://github.com/djsnipa1/css-cube-tutorial#readme"
+}
