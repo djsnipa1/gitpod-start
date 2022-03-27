@@ -1,26 +1,24 @@
 {
-  "scripts": {
-    "start": "npx sass scss/global.scss css/global.css --watch",
-    "build": "npx sass scss/global.scss css/global.css --style=compressed"
-  },
-  "dependencies": {
-    "gorko": "^0.9.1",
-    "modern-css-reset": "^1.4.0",
-    "sass": "^1.49.0"
-  },
-  "name": "css-cube-tutorial",
+  "name": "gitpod-starter-html",
   "version": "1.0.0",
-  "description": "from here http://lynx.re/x",
+  "description": "a template for starting an html project in gitpod.io",
   "main": "index.html",
-  "devDependencies": {},
+  "scripts": {
+    "serve-gitpod": "browser-sync --watch --server --no-open --no-ui --listen 0.0.0.0",
+    "serve": "browser-sync -f *.html -f *.js -f *.css"
+  },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/djsnipa1/css-cube-tutorial.git"
+    "url": "git+https://github.com/djsnipa1/gitpod-starter-html"
   },
   "author": "Chad Boyce",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/djsnipa1/css-cube-tutorial/issues"
+    "url": "https://github.com/djsnipa1/gitpod-starter-html/issues"
   },
-  "homepage": "https://github.com/djsnipa1/css-cube-tutorial#readme"
+  "homepage": "https://github.com/djsnipa1/gitpod-starter-html#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "servor": "^4.0.2"
+  }
 }
