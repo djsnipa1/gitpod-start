@@ -1,5 +1,6 @@
 tasks:
-  - init: npm install
+  - before: ./install.sh
+    init: npm install
     command: npm run serve-gitpod
 
 ports:
@@ -14,3 +15,12 @@ image:
 vscode:
   extensions:
     - gulajavaministudio.mayukaithemevsc
+    - eamodio.gitlens
+    - naumovs.color-highlight
+    - bierner.color-info
+    - anseki.vscode-color
+    - EditorConfig.EditorConfig
+    - dbaeumer.vscode-eslint
+    - christian-kohler.path-intellisense
+    - evgeniypeshkov.syntax-highlighter
+    - asvetliakov.vscode-neovim
