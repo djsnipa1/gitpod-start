@@ -9,9 +9,12 @@ sudo sed -i '50,$d' /etc/apt/sources.list
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 # add lazygit 
 sudo add-apt-repository -y ppa:lazygit-team/release
+# add fish
+sudo add-apt-repository -y ppa:fish-shell/release-3
+
 sudo apt install -y software-properties-common
 sudo apt update -y
-sudo apt install -y neovim
+#sudo apt install -y neovim
 #sudo apt install -y python-dev python-pip python3-dev python3-pip
 #sudo apt autoremove -y
 
@@ -42,10 +45,11 @@ sudo apt update
 echo "updated apt"
 
 sudo apt install -y neovim \
+  fish \
   nnn \
   ranger \
   lazygit \
-  figlet\
+  figlet \
   caca-utils \
   highlight \
   atool \
