@@ -48,6 +48,8 @@ echo "updated apt"
 sudo apt install -y neovim \
   gh \
   bat \
+  fzf \
+  ripgrep \
   bash-completion \
   tmux \
   fish \
@@ -132,7 +134,8 @@ sudo cp ./eget /usr/bin
 rm -rf ./eget
 
 # install gh extensions
-#gh extension install redraw/gh-install
+gh extension install redraw/gh-install
+gh extension install sheepla/gh-fzrepo
 
 # logo-ls
 eget Yash-Handa/logo-ls
