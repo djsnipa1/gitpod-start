@@ -10,10 +10,9 @@ sudo add-apt-repository -y ppa:neovim-ppa/stable
 # add lazygit 
 sudo add-apt-repository -y ppa:lazygit-team/release
 # add fish
-sudo add-apt-repository -y ppa:fish-shell/release-3
+#sudo add-apt-repository -y ppa:fish-shell/release-3
 
-sudo apt install -y software-properties-common
-sudo apt update -y
+#sudo apt install -y software-properties-common
 #sudo apt install -y neovim
 #sudo apt install -y python-dev python-pip python3-dev python3-pip
 #sudo apt autoremove -y
@@ -27,8 +26,8 @@ sudo apt update -y
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo apt update \
-&& sudo apt install gh -y
+#&& sudo apt update \
+#&& sudo apt install gh -y
 
 echo "added githubcli"
 
@@ -47,8 +46,11 @@ sudo apt update
 echo "updated apt"
 
 sudo apt install -y neovim \
+  gh \
+  bat \
   fish \
   nnn \
+  software-properties-common \
   ranger \
   lazygit \
   figlet \
@@ -104,20 +106,24 @@ echo "installed shit!"
 sudo rm -rf /var/lib/apt/lists/*
 
 # install chezmoi
-sh -c "$(curl -fsLS chezmoi.io/get)"
-sudo cp ./bin/chezmoi /usr/bin
-rm -rf ./bin
-echo "chezmoi installed"
+#sh -c "$(curl -fsLS chezmoi.io/get)"
+#sudo cp ./bin/chezmoi /usr/bin
+#rm -rf ./bin
+#echo "chezmoi installed"
 
 # neovim config
-git clone https://github.com/djsnipa1/dotfiles-chezmoi
-cd ./dotfiles-chezmoi || { echo "Failure"; exit 1; }
-cd ./private_dot_config || { echo "Failure"; exit 1; }
-cp -r ./nvim ~/.config
-cp -r ./private_fish ~/.config/fish
-cd ../..
-rm -rf ./dotfiles-chezmoi
-echo "installed config files"
+#git clone https://github.com/djsnipa1/dotfiles-chezmoi
+#cd ./dotfiles-chezmoi || { echo "Failure"; exit 1; }
+#cd ./private_dot_config || { echo "Failure"; exit 1; }
+#cp -r ./nvim ~/.config
+#cp -r ./private_fish ~/.config/fish
+#cd ../..
+#rm -rf ./dotfiles-chezmoi
+#echo "installed config files"
+
+# lunarvim
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh -y)
+#curl https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh -y | bash
 
 # install lazynpm
 curl https://i.jpillora.com/jesseduffield/lazynpm!! | bash
@@ -128,9 +134,9 @@ sudo cp ./eget /usr/bin
 rm -rf ./eget
 
 # install age
-sudo eget FiloSottile/age --to /usr/bin
+#sudo eget FiloSottile/age --to /usr/bin
 
 # install fisher
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+#curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 echo "finished!"
