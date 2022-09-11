@@ -48,6 +48,8 @@ echo "updated apt"
 sudo apt install -y neovim \
   gh \
   bat \
+  bash-completion \
+  tmux \
   fish \
   nnn \
   software-properties-common \
@@ -121,10 +123,6 @@ sudo rm -rf /var/lib/apt/lists/*
 #rm -rf ./dotfiles-chezmoi
 #echo "installed config files"
 
-# lunarvim
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh -y)
-#curl https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh -y | bash
-
 # install lazynpm
 curl https://i.jpillora.com/jesseduffield/lazynpm!! | bash
 
@@ -132,6 +130,17 @@ curl https://i.jpillora.com/jesseduffield/lazynpm!! | bash
 sudo curl https://zyedidia.github.io/eget.sh | sh
 sudo cp ./eget /usr/bin
 rm -rf ./eget
+
+# install gh extensions
+#gh extension install redraw/gh-install
+
+# logo-ls
+eget Yash-Handa/logo-ls
+sudo mv logo-ls /usr/bin
+alias ls=logo-ls
+
+# lunarvim
+curl https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh | bash -s -- --no-install-dependencies
 
 # install age
 #sudo eget FiloSottile/age --to /usr/bin
