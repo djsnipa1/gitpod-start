@@ -142,6 +142,9 @@ eget Yash-Handa/logo-ls
 sudo mv logo-ls /usr/bin
 alias ls=logo-ls
 
+# install lf
+sudo eget gokcehan/lf --to /usr/bin
+
 # lunarvim
 curl https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh | bash -s -- --no-install-dependencies
 
